@@ -2,7 +2,7 @@ FROM php:7.3-apache
 
 LABEL vendor="Mautic"
 
-LABEL maintainer="Luiz Eduardo Oliveira Fonseca <luiz@powertic.com>"
+LABEL maintainer="Raian HN raian@weberon.net"
 
 # Install PHP extensions
 RUN apt-get update && apt-get install --no-install-recommends -y \
@@ -63,8 +63,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 VOLUME /var/www/html
 
 # Define Mautic version and expected SHA1 signature
-ENV MAUTIC_VERSION 3.3.2
-ENV MAUTIC_SHA1 720bf3bdf76d404b6ec773c14788d2f68b1e77cc
+ENV MAUTIC_VERSION 3.2.5
+ENV MAUTIC_SHA1 f57071c500fcedd2a64c0e7b94f0354cfa54d0aa
 
 # By default enable cron jobs
 ENV MAUTIC_RUN_CRON_JOBS true
